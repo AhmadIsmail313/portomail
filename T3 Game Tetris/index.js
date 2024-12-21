@@ -1,4 +1,46 @@
-window.onload = () => {
+[15.32, 21/12/2024] Winky 05 TPLE 001: <html>
+
+<head>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="Resources/logo.ico">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="left-div">
+            <img src="Resources/logo.png" id="logo">
+            <hr>
+
+            <div id="score-div">
+                <label> Score: </label>
+                <label id="score"></label>
+            </div>
+            <div id="lines-div">
+                <label> Lines: </label>
+                <label id="lines"></label>
+            </div>
+        </div>
+        <div id="game-container">
+            <img src="Resources/background.png" id="background">
+            <canvas id="game-canvas"></canvas>
+        </div>
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+<footer class="bg-lightblue text-white text-center pb-5" style="background-color: #63fefe; color: #0015ff;">
+    <p>Created with <i class="bi bi-heart-fill text-danger"></i> by 
+        <a href="https://www.instagram.com/ananda_5.10/" class="fw-bold" style="color: #00008B;">Winky Eprilianto</a>
+    </p>
+</footer>
+
+
+</html>
+[15.37, 21/12/2024] Winky 05 TPLE 001: window.onload = () => {
     const
         background = document.getElementById("background"),
         scoreLbl = document.getElementById("score"),
@@ -19,7 +61,7 @@ window.onload = () => {
             if (color !== null) {
                 this.color = color;
                 this.img = new Image();
-                this.img.src = `resources/${Tetromino.COLORS[color]}.jpg`
+                this.img.src = Resources/${Tetromino.COLORS[color]}.jpg
             }
         }
 
@@ -136,7 +178,7 @@ window.onload = () => {
 
     function reset() {
         // Make false all blocks
-        FIELD.forEach((_, y) => FIELD[y] = Array.from({ length: FIELD_WIDTH }).map(_ => false));
+        FIELD.forEach((, y) => FIELD[y] = Array.from({ length: FIELD_WIDTH }).map( => false));
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
